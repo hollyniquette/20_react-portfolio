@@ -11,17 +11,20 @@ function Projects() {
 
   return (
     <div id="projects" className="max-w-[1040px] m-auto p-4 py-28">
-      <h1 className="text-4xl font-bold text-center text-[#001b5e]">
-        Projects
-      </h1>
       <div className="grid sm:grid-cols-2 gap-12 py-8">
         {/* TO DO: ADD PROJECT DESCRIPTIONS & LINKS */}
-        <a href="projects/project-1">
-          <ProjectCard img={placeholderImg} title="Project 1" />
+        <a href="projects/soundvoter">
+          <ProjectCard title="SoundVoter" />
         </a>
-        <ProjectCard img={placeholderImg} title="Project 2" />
-        <ProjectCard img={placeholderImg} title="Project 3" />
-        <ProjectCard img={placeholderImg} title="Project 4" />
+        <a href="projects/project2">
+          <ProjectCard title="project 2" />
+        </a>
+        <a href="projects/bite-buddy">
+          <ProjectCard title="bite buddy" />
+        </a>
+        <a href="projects/weather-dashboard">
+          <ProjectCard title="weather dashboard" />
+        </a>
       </div>
     </div>
   );

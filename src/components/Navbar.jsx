@@ -1,21 +1,70 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineHome, AiOutlineMail } from "react-icons/ai";
 import { BsPerson } from "react-icons/bs";
 import { GrProjects } from "react-icons/gr";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const location = useLocation();
   const handleNav = () => {
     setNav(!nav);
   };
 
+  let currentPageTitle;
+  switch (location.pathname) {
+    case "/about":
+      currentPageTitle = "about";
+      break;
+    case "/projects":
+      currentPageTitle = "projects";
+      break;
+    case "/projects/soundvoter":
+      currentPageTitle = "projects";
+      break;
+    case "/projects/bite-buddy":
+      currentPageTitle = "projects";
+      break;
+    case "/projects/weather-dashboard":
+      currentPageTitle = "projects";
+      break;
+    case "/projects/undecided":
+      currentPageTitle = "projects";
+      break;
+    case "/contact":
+      currentPageTitle = "contact";
+      break;
+    default:
+      currentPageTitle = "home";
+      break;
+  }
   return (
     <nav>
-      <AiOutlineMenu
+      <div className="md:block hidden fixed top-2 left-9 z-10 p-6">
+        <h1 className="text-4xl text-[#929487] font-semibold">
+          {currentPageTitle}
+        </h1>
+      </div>
+      {/* TODO: change react icons */}
+      <a
         onClick={handleNav}
-        className="fixed top-4 right-4 md:hidden cursor-pointer z-[99]"
-      />
+        className="fixed rounded-[25%] shadow-lg bg-[#929487]-400 shadow-[#929487] m-2 p-4 top-4 right-4 md:hidden cursor-pointer hover:scale-110 z-[99]"
+      >
+        <AiOutlineMenu size={20} />
+      </a>
+      {/* <AiOutlineMenu
+        size={20}
+        onClick={handleNav}
+        className="fixed rounded-[25%] shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 top-4 right-4 md:hidden cursor-pointer z-[99]"
+      /> */}
       {/* mobile nav */}
+      {!nav && (
+        <div className="md:hidden fixed top-2 left-9 z-10 p-6">
+          <h1 className="text-4xl text-[#929487] font-semibold">
+            {currentPageTitle}
+          </h1>
+        </div>
+      )}
       {nav ? (
         <div className="fixed w-full h-screen bg-white/90 flex flex-col justify-center items-center z-20">
           <a
