@@ -2,7 +2,7 @@
   "name": "react-portfolio",
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://hollyniquette.github.io/20_react-portfolio/#",
+  "homepage": "https://hollyniquette.github.io/20_react-portfolio/",
   "private": true,
   "scripts": {
     "dev": "vite",
