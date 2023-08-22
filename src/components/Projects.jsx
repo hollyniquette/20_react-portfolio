@@ -4,14 +4,9 @@ import ProjectCard from "./ProjectCard";
 import placeholderImg from "../assets/placeholder.jpg";
 
 function Projects() {
-  // const [info, setInfo] = useState(false);
-  // const handleInfo = () => {
-  //   setInfo(!Info);
-  // };
-
   return (
-    <div id="projects" className="max-w-[1040px] m-auto p-4 py-28">
-      <div className="grid sm:grid-cols-2 gap-12 py-8">
+    <div id="projects" className="max-w-[1600px] m-auto mt-20 p-8 py-28">
+      <div className="grid flex-auto sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-12">
         {/* TO DO: ADD PROJECT DESCRIPTIONS & LINKS */}
         <a href="projects/soundvoter">
           <ProjectCard title="SoundVoter" />
