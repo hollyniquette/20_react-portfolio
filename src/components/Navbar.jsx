@@ -7,6 +7,8 @@ import { GrProjects } from "react-icons/gr";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const location = useLocation();
+  const home = "https://hollyniquette.github.io/20_react-portfolio/";
+
   const handleNav = () => {
     setNav(!nav);
   };
@@ -66,7 +68,7 @@ const Navbar = () => {
           <div className="fixed w-full h-screen bg-white/30 flex flex-col justify-center items-center z-20">
             <a
               onClick={handleNav}
-              href="/"
+              href={`${home}/`}
               className="w-[50%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110"
             >
               <AiOutlineHome size={20} />
@@ -74,7 +76,7 @@ const Navbar = () => {
             </a>
             <a
               onClick={handleNav}
-              href="/about"
+              href={`${home}/about`}
               className="w-[50%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110"
             >
               <BsPerson size={20} />
@@ -82,7 +84,7 @@ const Navbar = () => {
             </a>
             <a
               onClick={handleNav}
-              href="/projects"
+              href={`${home}/projects`}
               className="w-[50%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110"
             >
               <GrProjects size={20} />
@@ -90,7 +92,7 @@ const Navbar = () => {
             </a>
             <a
               onClick={handleNav}
-              href="/contact"
+              href={`${home}/contact`}
               className="w-[50%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110"
             >
               <AiOutlineMail size={20} />
@@ -103,25 +105,25 @@ const Navbar = () => {
         <div className="md:block hidden fixed top-4 right-4 z-10">
           <div className="flex justify-center items-right">
             <a
-              href="/"
+              href={`${home}/`}
               className="rounded-[25%] shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110"
             >
               <AiOutlineHome size={20} />
             </a>
             <a
-              href="/about"
+              href={`${home}/about`}
               className="rounded-[25%] shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110"
             >
               <BsPerson size={20} />
             </a>
             <a
-              href="/projects"
+              href={`${home}/projects`}
               className="rounded-[25%] shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110"
             >
               <GrProjects size={20} />
             </a>
             <a
-              href="/contact"
+              href={`${home}/contact`}
               className="rounded-[25%] shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110"
             >
               <AiOutlineMail size={20} />
