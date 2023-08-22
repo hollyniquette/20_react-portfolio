@@ -5,7 +5,7 @@ function SoundVoter() {
   return (
     <div id="soundvoter" className="max-w-screen-xl m-auto p-8 mt-5 py-28">
       <h1 className="text-4xl font-bold text-center text-[#001b5e] pb-12">
-        SoundVoter
+        soundvoter
       </h1>
       <div className="flex flex-col md:flex-row">
         <div className="md:w-2/3 md:pr-10">

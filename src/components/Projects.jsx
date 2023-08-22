@@ -1,7 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 // TO DO: Import images
-import placeholderImg from "../assets/placeholder.jpg";
 
 function Projects() {
   return (
@@ -11,8 +10,8 @@ function Projects() {
         <a href="projects/soundvoter">
           <ProjectCard title="SoundVoter" />
         </a>
-        <a href="projects/project2">
-          <ProjectCard title="project 2" />
+        <a href="projects/text-editor">
+          <ProjectCard title="text editor" />
         </a>
         <a href="projects/bite-buddy">
           <ProjectCard title="bite buddy" />
