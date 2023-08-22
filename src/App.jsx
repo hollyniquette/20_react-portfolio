@@ -15,7 +15,7 @@ function App() {
     <div>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/20_react-portfolio" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/soundvoter" element={<SoundVoter />} />
