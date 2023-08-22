@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineHome, AiOutlineMail } from "react-icons/ai";
 import { BsPerson } from "react-icons/bs";
 import { GrProjects } from "react-icons/gr";
@@ -7,7 +7,7 @@ import { GrProjects } from "react-icons/gr";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const location = useLocation();
-  const home = "https://hollyniquette.github.io/20_react-portfolio";
+  const navigate = useNavigate();
 
   const handleNav = () => {
     setNav(!nav);
@@ -68,7 +68,7 @@ const Navbar = () => {
           <div className="fixed w-full h-screen bg-white/30 flex flex-col justify-center items-center z-20">
             <a
               onClick={handleNav}
-              href={`${home}/`}
+              href="/"
               className="w-[50%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110"
             >
               <AiOutlineHome size={20} />
@@ -76,7 +76,7 @@ const Navbar = () => {
             </a>
             <a
               onClick={handleNav}
-              href={`${home}/about`}
+              href="/about"
               className="w-[50%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110"
             >
               <BsPerson size={20} />
@@ -84,7 +84,7 @@ const Navbar = () => {
             </a>
             <a
               onClick={handleNav}
-              href={`${home}/projects`}
+              href="/projects"
               className="w-[50%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110"
             >
               <GrProjects size={20} />
@@ -92,7 +92,7 @@ const Navbar = () => {
             </a>
             <a
               onClick={handleNav}
-              href={`${home}/contact`}
+              href="/contact"
               className="w-[50%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110"
             >
               <AiOutlineMail size={20} />
@@ -105,25 +105,25 @@ const Navbar = () => {
         <div className="md:block hidden fixed top-4 right-4 z-10">
           <div className="flex justify-center items-right">
             <a
-              href={`${home}/`}
+              href="/"
               className="rounded-[25%] shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110"
             >
               <AiOutlineHome size={20} />
             </a>
             <a
-              href={`${home}/about`}
+              href="/about"
               className="rounded-[25%] shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110"
             >
               <BsPerson size={20} />
             </a>
             <a
-              href={`${home}/projects`}
+              href="/projects"
               className="rounded-[25%] shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110"
             >
               <GrProjects size={20} />
             </a>
             <a
-              href={`${home}/contact`}
+              href="/contact"
               className="rounded-[25%] shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110"
             >
               <AiOutlineMail size={20} />
