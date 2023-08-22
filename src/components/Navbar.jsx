@@ -7,7 +7,7 @@ import { GrProjects } from "react-icons/gr";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const location = useLocation();
-  const home = "https://hollyniquette.github.io/20_react-portfolio/";
+  const home = "https://hollyniquette.github.io/20_react-portfolio";
 
   const handleNav = () => {
     setNav(!nav);
